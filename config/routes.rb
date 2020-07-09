@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  ActiveAdmin.routes(self)
+  
+  root 'courses#index'
+
+  resources :courses, only: [:index, :show]
+  resources :course_groups_users, only: [:new, :create]
 end

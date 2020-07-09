@@ -1,0 +1,37 @@
+ru:
+  active_admin:
+    courses: 'Курсы'
+    course_groups: 'Группы'
+    course_groups_users: 'Cтуденты курса'
+  activerecord:
+    errors:
+      models:
+        course_groups_user:
+          attributes:
+            course_group:
+              required: 'не может быть пустым'
+        course_group:
+          attributes:
+            course:
+              required: 'не может быть пустым'
+    models:
+      comment:
+        one: 'Комментарий'
+        other: 'Комментарии'
+      course: 'Курс'
+      course_group: 'Группа'
+      course_groups_user: 'Участники'
+    attributes:
+      course:
+        title: 'Название'
+        created_at: 'Дата создания'
+        updated_at: 'Дата обновления'
+      course_group:
+        title: 'Название'
+        course: 'Курс'
+        started_at: 'Дата старта занятий'
+        created_at: 'Дата создания'
+        updated_at: 'Дата обновления'
+      course_groups_user:
+        email: 'Email'
+        course_group: 'Группа'

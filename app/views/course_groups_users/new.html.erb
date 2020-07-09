@@ -1,0 +1,7 @@
+<h1>Записаться в группу</h1>
+
+<% if course_group = @course_groups_user.course_group %>
+  <p><%= link_to 'Назад', course_path(course_group.course_id) %></p>
+<% end %>
+
+<%= render 'form', course_groups_user: @course_groups_user %>

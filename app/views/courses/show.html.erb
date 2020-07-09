@@ -1,0 +1,6 @@
+<h1>Курс - <%= @course.title %></h1>
+<p><%= link_to 'Назад', courses_path %></p>
+
+<% @course.course_groups.each do |course_group| %>
+  <%= render 'course_group', course_group: course_group %>
+<% end %>

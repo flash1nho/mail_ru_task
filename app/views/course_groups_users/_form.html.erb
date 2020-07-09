@@ -1,0 +1,23 @@
+<%= form_with(model: course_groups_user, local: true) do |form| %>
+  <%= form.hidden_field :course_group_id %>
+
+  <% if course_groups_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= error_text(course_groups_user.errors.count) %>:</h2>
+
+      <ul>
+      <% course_groups_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.email_field :email, placeholder: 'Email' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

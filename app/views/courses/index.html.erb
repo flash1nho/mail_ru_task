@@ -1,0 +1,24 @@
+<h1>Курсы</h1>
+
+<table class='js-course-table'>
+  <thead>
+    <tr>
+      <th>Название курса</th>
+      <th>Дата старта занятий в группе</th>
+      <th>Количество студентов</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @course_groups.each do |course_group| %>
+      <tr>
+        <td><%= link_to course_group.course_title, course_path(course_group.course_id) %></td>
+        <td><%= course_group.started_at_human_name %></td>
+        <td><%= course_group.users_count %></td>
+        <td><%= link_to 'Карточка курса', course_path(course_group.course_id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
